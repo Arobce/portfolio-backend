@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_home_page_hero_sections",
+  "info": {
+    "displayName": "Hero section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "talk_button": {
+      "type": "string"
+    },
+    "resume_button": {
+      "type": "string"
+    }
+  }
+}

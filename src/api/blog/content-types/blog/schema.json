@@ -47,6 +47,13 @@
       "type": "component",
       "repeatable": true,
       "component": "shared.seo"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Title"
+    },
+    "excerpt": {
+      "type": "text"
     }
   }
 }

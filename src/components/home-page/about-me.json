@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_home_page_about_mes",
+  "info": {
+    "displayName": "about_me",
+    "icon": "emotionHappy"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "photo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "talk_button": {
+      "type": "string"
+    },
+    "resume_button": {
+      "type": "string"
+    }
+  }
+}
