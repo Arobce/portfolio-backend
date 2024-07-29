@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_pages",
+  "info": {
+    "singularName": "about-page",
+    "pluralName": "about-pages",
+    "displayName": "About Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "small_intro_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home-page.about-me"
+    },
+    "partner_brands_section": {
+      "displayName": "partner_brands_section",
+      "type": "component",
+      "repeatable": false,
+      "component": "about-page.partner-brands-section"
+    }
+  }
+}

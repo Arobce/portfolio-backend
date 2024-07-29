@@ -1,17 +1,42 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface AboutPagePartnerBrandsSection extends Schema.Component {
+  collectionName: 'compo_abt_pag_ptner_brands_sctns';
+  info: {
+    displayName: 'partner_brands_section';
+    icon: 'alien';
+  };
+  attributes: {
+    partner_brands: Attribute.Component<'about-page.partner-brands', true>;
+  };
+}
+
+export interface AboutPagePartnerBrands extends Schema.Component {
+  collectionName: 'components_about_page_partner_brands';
+  info: {
+    displayName: 'partner_brands';
+    icon: 'alien';
+  };
+  attributes: {
+    title: Attribute.String;
+    timeframe: Attribute.String;
+    logo: Attribute.Media<'images'>;
+  };
+}
+
 export interface HomePageAboutMe extends Schema.Component {
   collectionName: 'components_home_page_about_mes';
   info: {
     displayName: 'about_me';
     icon: 'emotionHappy';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
-    description: Attribute.Text;
     photo: Attribute.Media<'images'> & Attribute.Required;
     talk_button: Attribute.String;
     resume_button: Attribute.String;
+    description: Attribute.Blocks;
   };
 }
 
@@ -82,6 +107,8 @@ export interface SharedSeo extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'about-page.partner-brands-section': AboutPagePartnerBrandsSection;
+      'about-page.partner-brands': AboutPagePartnerBrands;
       'home-page.about-me': HomePageAboutMe;
       'home-page.hero-section': HomePageHeroSection;
       'shared.meta-social': SharedMetaSocial;
