@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_home_page_my_offerings",
+  "info": {
+    "displayName": "My Offerings",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "blocks"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

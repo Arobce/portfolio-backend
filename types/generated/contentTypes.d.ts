@@ -802,6 +802,7 @@ export interface ApiAboutPageAboutPage extends Schema.SingleType {
   attributes: {
     small_intro_section: Attribute.Component<'home-page.about-me'>;
     partner_brands_section: Attribute.Component<'about-page.partner-brands-section'>;
+    tech_stack_section: Attribute.Component<'about-page.tech-stack-section'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -895,6 +896,7 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
     singularName: 'home-page';
     pluralName: 'home-pages';
     displayName: 'Home Page';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -902,6 +904,7 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
   attributes: {
     hero: Attribute.Component<'home-page.hero-section'>;
     about_me: Attribute.Component<'home-page.about-me'>;
+    my_offerings_section: Attribute.Component<'home-page.my-offerings-section'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_about_page_tech_stack_sections",
+  "info": {
+    "displayName": "tech_stack_section",
+    "icon": "cog",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "tech_stack_item": {
+      "displayName": "tech_stack_item",
+      "type": "component",
+      "repeatable": true,
+      "component": "about-page.tech-stack-item"
+    }
+  }
+}

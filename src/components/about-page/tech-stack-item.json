@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_about_page_tech_stack_items",
+  "info": {
+    "displayName": "tech_stack_item"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "frontend",
+        "backend",
+        "ui",
+        "server"
+      ]
+    }
+  }
+}

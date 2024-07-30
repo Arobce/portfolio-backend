@@ -2,7 +2,8 @@
   "collectionName": "compo_abt_pag_ptner_brands_sctns",
   "info": {
     "displayName": "partner_brands_section",
-    "icon": "alien"
+    "icon": "alien",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -10,6 +11,9 @@
       "type": "component",
       "repeatable": true,
       "component": "about-page.partner-brands"
+    },
+    "title": {
+      "type": "string"
     }
   }
 }

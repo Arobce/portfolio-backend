@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_home_page_my_offerings_sections",
+  "info": {
+    "displayName": "My Offerings Section",
+    "icon": "briefcase",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "my_offerings": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home-page.my-offerings"
+    }
+  }
+}

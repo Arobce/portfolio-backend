@@ -2,22 +2,24 @@
   "collectionName": "components_about_page_partner_brands",
   "info": {
     "displayName": "partner_brands",
-    "icon": "alien"
+    "icon": "alien",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "title": {
-      "type": "string"
-    },
     "timeframe": {
       "type": "string"
     },
     "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "work_done": {
+      "type": "string"
     }
   }
 }

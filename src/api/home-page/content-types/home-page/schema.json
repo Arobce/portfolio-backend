@@ -4,7 +4,8 @@
   "info": {
     "singularName": "home-page",
     "pluralName": "home-pages",
-    "displayName": "Home Page"
+    "displayName": "Home Page",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -22,6 +23,12 @@
       "type": "component",
       "repeatable": false,
       "component": "home-page.about-me"
+    },
+    "my_offerings_section": {
+      "displayName": "My Offerings Section",
+      "type": "component",
+      "repeatable": false,
+      "component": "home-page.my-offerings-section"
     }
   }
 }

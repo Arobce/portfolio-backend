@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_categories",
+  "info": {
+    "displayName": "category",
+    "icon": "bold"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}
