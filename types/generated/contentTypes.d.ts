@@ -842,7 +842,7 @@ export interface ApiBlogBlog extends Schema.CollectionType {
       'api::blog-category.blog-category'
     >;
     grid_image: Attribute.Media<'images'> & Attribute.Required;
-    SEO: Attribute.Component<'shared.seo', true>;
+    SEO: Attribute.Component<'shared.seo'>;
     slug: Attribute.UID<'api::blog.blog', 'Title'>;
     excerpt: Attribute.Text;
     createdAt: Attribute.DateTime;
@@ -883,6 +883,82 @@ export interface ApiBlogCategoryBlogCategory extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::blog-category.blog-category',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCaseStudyCaseStudy extends Schema.CollectionType {
+  collectionName: 'case_studies';
+  info: {
+    singularName: 'case-study';
+    pluralName: 'case-studies';
+    displayName: 'Case Study';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    content: Attribute.Blocks;
+    case_study_category: Attribute.Relation<
+      'api::case-study.case-study',
+      'manyToOne',
+      'api::case-study-category.case-study-category'
+    >;
+    seo: Attribute.Component<'shared.seo'>;
+    slug: Attribute.UID<'api::case-study.case-study', 'title'>;
+    cover_video: Attribute.Media<'videos'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::case-study.case-study',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::case-study.case-study',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCaseStudyCategoryCaseStudyCategory
+  extends Schema.CollectionType {
+  collectionName: 'case_study_categories';
+  info: {
+    singularName: 'case-study-category';
+    pluralName: 'case-study-categories';
+    displayName: 'Case study category';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    name: Attribute.String;
+    case_studies: Attribute.Relation<
+      'api::case-study-category.case-study-category',
+      'oneToMany',
+      'api::case-study.case-study'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::case-study-category.case-study-category',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::case-study-category.case-study-category',
       'oneToOne',
       'admin::user'
     > &
@@ -944,6 +1020,8 @@ declare module '@strapi/types' {
       'api::about-page.about-page': ApiAboutPageAboutPage;
       'api::blog.blog': ApiBlogBlog;
       'api::blog-category.blog-category': ApiBlogCategoryBlogCategory;
+      'api::case-study.case-study': ApiCaseStudyCaseStudy;
+      'api::case-study-category.case-study-category': ApiCaseStudyCategoryCaseStudyCategory;
       'api::home-page.home-page': ApiHomePageHomePage;
     }
   }
