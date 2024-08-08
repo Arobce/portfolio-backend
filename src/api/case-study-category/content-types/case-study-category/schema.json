@@ -17,9 +17,9 @@
     },
     "case_studies": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::case-study.case-study",
-      "mappedBy": "case_study_category"
+      "mappedBy": "case_study_categories"
     }
   }
 }

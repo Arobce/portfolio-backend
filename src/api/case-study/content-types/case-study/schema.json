@@ -19,9 +19,9 @@
     "content": {
       "type": "blocks"
     },
-    "case_study_category": {
+    "case_study_categories": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::case-study-category.case-study-category",
       "inversedBy": "case_studies"
     },
@@ -35,11 +35,12 @@
       "targetField": "title"
     },
     "cover_video": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "videos"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     }
   }
 }

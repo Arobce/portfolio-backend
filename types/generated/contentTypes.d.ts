@@ -904,9 +904,9 @@ export interface ApiCaseStudyCaseStudy extends Schema.CollectionType {
   attributes: {
     title: Attribute.String & Attribute.Required;
     content: Attribute.Blocks;
-    case_study_category: Attribute.Relation<
+    case_study_categories: Attribute.Relation<
       'api::case-study.case-study',
-      'manyToOne',
+      'manyToMany',
       'api::case-study-category.case-study-category'
     >;
     seo: Attribute.Component<'shared.seo'>;
@@ -946,7 +946,7 @@ export interface ApiCaseStudyCategoryCaseStudyCategory
     name: Attribute.String;
     case_studies: Attribute.Relation<
       'api::case-study-category.case-study-category',
-      'oneToMany',
+      'manyToMany',
       'api::case-study.case-study'
     >;
     createdAt: Attribute.DateTime;
