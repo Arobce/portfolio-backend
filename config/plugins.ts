@@ -10,7 +10,7 @@ export default () => ({
                     enabled: true,
                     config: {
                         subject: "RC site Contact Form",
-                        from: 'noreply@roshanchapagain.com'
+                        from: 'noeply@roshanchapagain.com'
                     }
                 },
             ]
