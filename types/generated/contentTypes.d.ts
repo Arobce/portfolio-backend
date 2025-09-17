@@ -922,6 +922,7 @@ export interface ApiAboutPageAboutPage extends Schema.SingleType {
     small_intro_section: Attribute.Component<'home-page.about-me'>;
     partner_brands_section: Attribute.Component<'about-page.partner-brands-section'>;
     tech_stack_section: Attribute.Component<'about-page.tech-stack-section'>;
+    gallery: Attribute.Component<'about-page.gallery', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

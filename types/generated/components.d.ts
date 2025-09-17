@@ -1,5 +1,18 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface AboutPageGallery extends Schema.Component {
+  collectionName: 'components_about_page_galleries';
+  info: {
+    displayName: 'Gallery';
+    icon: 'landscape';
+  };
+  attributes: {
+    Description: Attribute.String;
+    Image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+  };
+}
+
 export interface AboutPagePartnerBrandsSection extends Schema.Component {
   collectionName: 'compo_abt_pag_ptner_brands_sctns';
   info: {
@@ -171,6 +184,7 @@ export interface SharedSeo extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'about-page.gallery': AboutPageGallery;
       'about-page.partner-brands-section': AboutPagePartnerBrandsSection;
       'about-page.partner-brands': AboutPagePartnerBrands;
       'about-page.tech-stack-item': AboutPageTechStackItem;

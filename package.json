@@ -5,6 +5,9 @@
   "description": "A Strapi application",
   "scripts": {
     "develop": "strapi develop",
+    "dev": "cp .env.development .env && strapi develop",
+    "dev:db": "docker-compose up -d",
+    "dev:stop": "docker-compose down",
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi",
