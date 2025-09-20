@@ -27,7 +27,8 @@
         "frontend",
         "backend",
         "devops",
-        "tools"
+        "tools",
+        "framework"
       ]
     }
   }

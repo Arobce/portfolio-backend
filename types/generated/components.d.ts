@@ -50,7 +50,7 @@ export interface AboutPageTechStackItem extends Schema.Component {
     name: Attribute.String;
     logo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     category: Attribute.Enumeration<
-      ['languages', 'frontend', 'backend', 'devops', 'tools']
+      ['languages', 'frontend', 'backend', 'devops', 'tools', 'framework']
     >;
   };
 }
