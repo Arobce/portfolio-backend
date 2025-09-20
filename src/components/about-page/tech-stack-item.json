@@ -28,7 +28,10 @@
         "backend",
         "devops",
         "tools",
-        "framework"
+        "framework",
+        "database",
+        "cms",
+        "cloud"
       ]
     }
   }
