@@ -44,11 +44,14 @@ export interface AboutPageTechStackItem extends Schema.Component {
   collectionName: 'components_about_page_tech_stack_items';
   info: {
     displayName: 'tech_stack_item';
+    description: '';
   };
   attributes: {
     name: Attribute.String;
     logo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    category: Attribute.Enumeration<['frontend', 'backend', 'ui', 'server']>;
+    category: Attribute.Enumeration<
+      ['languages', 'frontend', 'backend', 'devops', 'tools']
+    >;
   };
 }
 
