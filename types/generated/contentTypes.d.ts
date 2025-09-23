@@ -1031,7 +1031,7 @@ export interface ApiCaseStudyCaseStudy extends Schema.CollectionType {
     >;
     seo: Attribute.Component<'shared.seo'>;
     slug: Attribute.UID<'api::case-study.case-study', 'title'>;
-    cover_video: Attribute.Media<'videos'>;
+    cover_media: Attribute.Media<'videos' | 'images'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
